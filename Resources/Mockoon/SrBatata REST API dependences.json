@@ -1,0 +1,94 @@
+{
+  "uuid": "9666f368-7b52-4853-8f70-026526dc9021",
+  "lastMigration": 20,
+  "name": "SrBatata REST API dependences",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "149e3d35-dbbc-4e6a-afef-39cf3c750266",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "lol/summoner/v4/summoners/by-name/:summonerName",
+      "responses": [
+        {
+          "uuid": "ed4df2dc-2686-4d04-923c-752cfc630060",
+          "body": "{\r\n\t\"id\": \"{{faker 'datatype.uuid'}}\",\r\n\t\"accountId\": \"{{faker 'datatype.uuid'}}\",\r\n\t\"puuid\": \"{{faker 'datatype.uuid'}}\",\r\n\t\"name\": \"{{urlParam 'summonerName'}}\",\r\n\t\"profileIconId\": {{faker 'datatype.number' min=1 max=10000}},\r\n\t\"revisionDate\": {{faker 'datatype.number' min=10000}},\r\n\t\"summonerLevel\": {{faker 'datatype.number' min=0 max=1000}}\r\n}",
+          "latency": 300,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "9fa13df6-8d34-4fb4-920e-52a6185e66f1",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "lol/summoner/v4/summoners/by-account/:accountId",
+      "responses": [
+        {
+          "uuid": "2d7c67d5-8a24-4819-9256-3120c0e7def2",
+          "body": "{\r\n\t\"id\": \"{{faker 'datatype.uuid'}}\",\r\n\t\"accountId\": \"{{urlParam 'accountId'}}\",\r\n\t\"puuid\": \"{{faker 'datatype.uuid'}}\",\r\n\t\"name\": \"{{faker 'internet.userName'}}\",\r\n\t\"profileIconId\": {{faker 'datatype.number' min=1 max=10000}},\r\n\t\"revisionDate\": {{faker 'datatype.number' min=10000}},\r\n\t\"summonerLevel\": {{faker 'datatype.number' min=0 max=1000}}\r\n}",
+          "latency": 300,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
