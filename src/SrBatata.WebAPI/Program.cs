@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore;
-
 namespace SrBatata.WebAPI
 {
     public class Program
@@ -19,16 +17,16 @@ namespace SrBatata.WebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             ConfigureConfiguration(builder.Configuration);
-            ConfigureServices(builder.Services);
-
+            ConfigureServices(builder.Services, builder.Configuration);
+            
             return builder.Build();
         }
 
-        private static void ConfigureConfiguration(ConfigurationManager configuration) 
+        private static void ConfigureConfiguration(IConfiguration configuration) 
         {
         }
 
-        private static void ConfigureServices(IServiceCollection services)
+        private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
             // Add services to the container.
             services.AddControllers();
@@ -36,6 +34,9 @@ namespace SrBatata.WebAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+
+            // Configure Animal Encyclopedia module
+            services.ConfigureAnimalEncyclopedia(configuration);
         }
 
         private static void ConfigureMiddleware(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services)

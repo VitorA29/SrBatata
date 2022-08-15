@@ -6,8 +6,16 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1E8E4EED-039C-4C04-AB58-1948DBB4D22C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SrBatata.WebAPI", "src\SrBatata.WebAPI\SrBatata.WebAPI.csproj", "{BBB1E2F5-53BD-49FA-974F-90DD3F307BF3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7B95AA70-748D-4299-A774-5C6198F306F3} = {7B95AA70-748D-4299-A774-5C6198F306F3}
+		{ED92E7F3-86ED-41E5-95ED-DD2194C9648B} = {ED92E7F3-86ED-41E5-95ED-DD2194C9648B}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{D7C1B027-06BA-4AED-9A7E-9A0D694A8371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resources", "Resources\Resources.csproj", "{D7C1B027-06BA-4AED-9A7E-9A0D694A8371}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SrBatata.AnimalEncyclopedia", "src\SrBatata.AnimalEncyclopedia\SrBatata.AnimalEncyclopedia.csproj", "{7B95AA70-748D-4299-A774-5C6198F306F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SrBatata.Data", "src\SrBatata.Data\SrBatata.Data.csproj", "{ED92E7F3-86ED-41E5-95ED-DD2194C9648B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +31,22 @@ Global
 		{D7C1B027-06BA-4AED-9A7E-9A0D694A8371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C1B027-06BA-4AED-9A7E-9A0D694A8371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C1B027-06BA-4AED-9A7E-9A0D694A8371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B95AA70-748D-4299-A774-5C6198F306F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B95AA70-748D-4299-A774-5C6198F306F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B95AA70-748D-4299-A774-5C6198F306F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B95AA70-748D-4299-A774-5C6198F306F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED92E7F3-86ED-41E5-95ED-DD2194C9648B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED92E7F3-86ED-41E5-95ED-DD2194C9648B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED92E7F3-86ED-41E5-95ED-DD2194C9648B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED92E7F3-86ED-41E5-95ED-DD2194C9648B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BBB1E2F5-53BD-49FA-974F-90DD3F307BF3} = {1E8E4EED-039C-4C04-AB58-1948DBB4D22C}
+		{7B95AA70-748D-4299-A774-5C6198F306F3} = {1E8E4EED-039C-4C04-AB58-1948DBB4D22C}
+		{ED92E7F3-86ED-41E5-95ED-DD2194C9648B} = {1E8E4EED-039C-4C04-AB58-1948DBB4D22C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {857DF18D-5C4B-4B01-98FF-27E40F5CF3D8}
